@@ -129,7 +129,8 @@ python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n
 | Landing structure | `landing` | `--domain landing "hero social-proof"` |
 | React Native perf | `react` | `--domain react "rerender memo list"` |
 | App interface a11y | `web` | `--domain web "accessibilityLabel touch safe-areas"` |
-| AI prompt / CSS keywords | `prompt` | `--domain prompt "minimalism"` |
+| Icon recommendations | `icons` | `--domain icons "check user settings"` |
+| Google Fonts lookup | `google-fonts` | `--domain google-fonts "playful geometric"` |
 
 ### Step 4: Stack Guidelines
 
@@ -156,7 +157,8 @@ python3 {{SCRIPT_PATH}} "<keyword>" --stack <stack>
 | `ux` | Best practices, anti-patterns | animation, accessibility, z-index, loading |
 | `react` | React/Next.js performance | waterfall, bundle, suspense, memo, rerender, cache |
 | `web` | App interface guidelines (iOS/Android/React Native) | accessibilityLabel, touch targets, safe areas, Dynamic Type |
-| `prompt` | AI prompts, CSS keywords | (style name) |
+| `icons` | Icon suggestions by semantic role | check, user, settings, search, bell |
+| `google-fonts` | Full Google Fonts catalogue | geometric, playful, variable, noto, mono |
 
 ### Available Stacks
 
