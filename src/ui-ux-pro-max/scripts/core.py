@@ -73,6 +73,18 @@ CSV_CONFIG = {
 }
 
 STACK_CONFIG = {
+    "html-tailwind": {"file": "stacks/html-tailwind.csv"},
+    "react": {"file": "stacks/react.csv"},
+    "nextjs": {"file": "stacks/nextjs.csv"},
+    "astro": {"file": "stacks/astro.csv"},
+    "vue": {"file": "stacks/vue.csv"},
+    "nuxtjs": {"file": "stacks/nuxtjs.csv"},
+    "nuxt-ui": {"file": "stacks/nuxt-ui.csv"},
+    "svelte": {"file": "stacks/svelte.csv"},
+    "swiftui": {"file": "stacks/swiftui.csv"},
+    "flutter": {"file": "stacks/flutter.csv"},
+    "shadcn": {"file": "stacks/shadcn.csv"},
+    "jetpack-compose": {"file": "stacks/jetpack-compose.csv"},
     "react-native": {"file": "stacks/react-native.csv"},
 }
 

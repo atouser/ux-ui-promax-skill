@@ -53,7 +53,7 @@ Extract key information from user request:
 - **Product type**: Entertainment (social, video, music, gaming), Tool (scanner, editor, converter), Productivity (task manager, notes, calendar), or hybrid
 - **Target audience**: C-end consumer users; consider age group, usage context (commute, leisure, work)
 - **Style keywords**: playful, vibrant, minimal, dark mode, content-first, immersive, etc.
-- **Stack**: React Native (this project's only tech stack)
+- **Stack**: the target implementation stack (see **Available Stacks** below)
 
 ### Step 2: Generate Design System (REQUIRED)
 
@@ -131,12 +131,12 @@ python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --domain <domain> [-n
 | App interface a11y | `web` | `--domain web "accessibilityLabel touch safe-areas"` |
 | AI prompt / CSS keywords | `prompt` | `--domain prompt "minimalism"` |
 
-### Step 4: Stack Guidelines (React Native)
+### Step 4: Stack Guidelines
 
-Get React Native implementation-specific best practices:
+Get implementation-specific best practices for the target stack (see **Available Stacks** below):
 
 ```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack react-native
+python3 {{SCRIPT_PATH}} "<keyword>" --stack <stack>
 ```
 
 ---
@@ -162,6 +162,18 @@ python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack react-native
 
 | Stack | Focus |
 |-------|-------|
+| `html-tailwind` | Semantic HTML, utility-first layout |
+| `react` | Components, hooks, state, re-renders |
+| `nextjs` | App Router, server/client boundaries, data fetching |
+| `astro` | Islands, partial hydration, content collections |
+| `vue` | Composition API, reactivity, SFCs |
+| `nuxtjs` | SSR/SSG, auto-imports, data fetching |
+| `nuxt-ui` | Nuxt UI component and theming conventions |
+| `svelte` | Runes, stores, reactivity |
+| `swiftui` | Declarative UI, state, navigation |
+| `flutter` | Widgets, layout, platform conventions |
+| `shadcn` | Component composition, theming, variants |
+| `jetpack-compose` | Composables, state hoisting, Material theming |
 | `react-native` | Components, Navigation, Lists |
 
 ---
@@ -174,7 +186,7 @@ python3 skills/ui-ux-pro-max/scripts/search.py "<keyword>" --stack react-native
 - Product type: Tool (AI search engine)
 - Target audience: C-end users looking for fast, intelligent search
 - Style keywords: modern, minimal, content-first, dark mode
-- Stack: React Native
+- Stack: React (Next.js)
 
 ### Step 2: Generate Design System (REQUIRED)
 
@@ -197,7 +209,7 @@ python3 skills/ui-ux-pro-max/scripts/search.py "search loading animation" --doma
 ### Step 4: Stack Guidelines
 
 ```bash
-python3 skills/ui-ux-pro-max/scripts/search.py "list performance navigation" --stack react-native
+python3 skills/ui-ux-pro-max/scripts/search.py "list performance navigation" --stack react
 ```
 
 **Then:** Synthesize design system + detailed searches and implement the design.
@@ -225,7 +237,7 @@ python3 skills/ui-ux-pro-max/scripts/search.py "fintech crypto" --design-system 
 - Use **multi-dimensional keywords** — combine product + industry + tone + density: `"entertainment social vibrant content-dense"` not just `"app"`
 - Try different keywords for the same need: `"playful neon"` → `"vibrant dark"` → `"content-first minimal"`
 - Use `--design-system` first for full recommendations, then `--domain` to deep-dive any dimension you're unsure about
-- Always add `--stack react-native` for implementation-specific guidance
+- Always add `--stack <stack>` for implementation-specific guidance, choosing the stack that matches the project
 
 ### Common Sticking Points
 
