@@ -214,11 +214,15 @@ class DesignSystemGenerator:
                 "accessibility": best_style.get("Accessibility", "")
             },
             "colors": {
-                "primary": best_color.get("Primary (Hex)", "#2563EB"),
-                "secondary": best_color.get("Secondary (Hex)", "#3B82F6"),
-                "cta": best_color.get("CTA (Hex)", "#F97316"),
-                "background": best_color.get("Background (Hex)", "#F8FAFC"),
-                "text": best_color.get("Text (Hex)", "#1E293B"),
+                # colors.csv uses Tailwind token names (Primary/Accent/Background/
+                # Foreground). The old lookups used "Primary (Hex)"-style names that
+                # do not exist in the file, so every palette silently fell through to
+                # the same hardcoded blue defaults.
+                "primary": best_color.get("Primary", "#2563EB"),
+                "secondary": best_color.get("Secondary", "#3B82F6"),
+                "cta": best_color.get("Accent", "#F97316"),
+                "background": best_color.get("Background", "#F8FAFC"),
+                "text": best_color.get("Foreground", "#1E293B"),
                 "notes": best_color.get("Notes", "")
             },
             "typography": {
