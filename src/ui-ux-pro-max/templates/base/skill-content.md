@@ -82,9 +82,10 @@ To save the design system for **hierarchical retrieval across sessions**, add `-
 python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persist -p "Project Name"
 ```
 
-This creates:
-- `design-system/MASTER.md` — Global Source of Truth with all design rules
-- `design-system/pages/` — Folder for page-specific overrides
+This creates a folder named after the project (the `-p` value, lowercased with spaces
+replaced by hyphens):
+- `design-system/<project>/MASTER.md` — Global Source of Truth with all design rules
+- `design-system/<project>/pages/` — Folder for page-specific overrides
 
 **With page-specific override:**
 ```bash
@@ -92,17 +93,17 @@ python3 skills/ui-ux-pro-max/scripts/search.py "<query>" --design-system --persi
 ```
 
 This also creates:
-- `design-system/pages/dashboard.md` — Page-specific deviations from Master
+- `design-system/<project>/pages/dashboard.md` — Page-specific deviations from Master
 
 **How hierarchical retrieval works:**
-1. When building a specific page (e.g., "Checkout"), first check `design-system/pages/checkout.md`
+1. When building a specific page (e.g., "Checkout"), first check `design-system/<project>/pages/checkout.md`
 2. If the page file exists, its rules **override** the Master file
-3. If not, use `design-system/MASTER.md` exclusively
+3. If not, use `design-system/<project>/MASTER.md` exclusively
 
 **Context-aware retrieval prompt:**
 ```
-I am building the [Page Name] page. Please read design-system/MASTER.md.
-Also check if design-system/pages/[page-name].md exists.
+I am building the [Page Name] page. Please read design-system/[PROJECT]/MASTER.md.
+Also check if design-system/[PROJECT]/pages/[page-name].md exists.
 If the page file exists, prioritize its rules.
 If not, use the Master rules exclusively.
 Now, generate the code...
